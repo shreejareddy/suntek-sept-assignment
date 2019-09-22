@@ -1,0 +1,34 @@
+#include<stdio.h>
+void main()
+{
+    int a[100],n,i,sum=0,l,c,b,actsum;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+    sum=sum+a[i];
+    if(n%2!=0)
+    l=(n+1)/2;
+    else
+    l=n/2;
+    actsum=(n*(n+1))/2;
+    if(actsum>sum)
+    {
+        b=actsum-sum+l;
+        printf("the missing no. is %d\n",b);
+        c=b+sum-actsum;
+        if(c>n)
+        c=c-1;
+        printf("the repeated no. is %d\n",c);
+    }
+    else
+    {
+        b=sum-actsum+l;
+        printf("the missing no. is %d\n",b);
+        c=b+actsum-sum;
+        if(c<=0)
+        c=c+1;
+        printf("the repeated no. is %d\n",c);
+    }
+    
+}
