@@ -1,0 +1,16 @@
+/*RECURSIVE APPROACH FOR FACTORIAL */
+#include<stdio.h>
+void main()
+{
+    int n;
+    scanf("%d",&n);
+    if (n==0||n==1)
+    {
+    return 1;
+   }
+    else 
+    return (n*factorial(n-1));
+    
+}
+OUTPUT:5
+120
