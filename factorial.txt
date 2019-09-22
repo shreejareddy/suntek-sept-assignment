@@ -1,0 +1,28 @@
+#include<stdio.h>
+ 
+int factorial(int);
+void main()
+{
+    int n,x,fact=1,i;
+    scanf("%d",&n);
+    //iteration
+    for(i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("factorial of %d is %d\n",n,fact);
+   x= factorial(n);
+   printf(" factorial of %d is %d",n,x);
+}
+//recursion
+int factorial(int n)
+{
+    int i;
+    if (n==0||n==1)
+    {
+    return 1;
+   }
+    else 
+    return (n*factorial(n-1));
+    
+}
