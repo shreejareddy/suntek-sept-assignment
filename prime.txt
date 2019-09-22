@@ -1,0 +1,37 @@
+/
+#include <stdio.h>
+
+int main()
+
+{
+
+int a;
+
+scanf("%d",&a);
+
+if(a%2!=0)
+
+{
+
+    if(a%3!=0&&a%5!=0&&a%7!=0)
+
+    {
+
+        printf("given no is prime number");
+
+    }
+
+    else
+
+    {
+
+        printf("given no is not prime number");
+
+    }
+}
+else if(a==2 || a==3 || a==5 || a==7)
+printf("its is a prime number");
+else
+printf("its not a prime number");
+return 0;
+}
