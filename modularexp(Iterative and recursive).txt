@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+int expMod(int,int,int);
+
+int M;
+
+void main()
+
+{
+   
+ int x,n,fr,i,temp=1,k;
+ printf("enter num ");
+ scanf("%d",&x);
+ printf("enter power to be raised");
+ scanf("%d",&n);
+printf("enter mod value");
+scanf("%d",&M);
+for(i=1;i<=n;i++)
+{
+   temp=temp*x;
+}
+fr=temp%M;
+printf("result using iteration process is%d\n ",fr);
+printf("result using recursion process is %d ",expMod(x,n,M));
+}
+
+
+int expMod(int x, unsigned int y, int p) 
+{ 
+    int temp = 1;     
+  x = x % p;  
+   while (y > 0) 
+    { 
+        if (y & 1) 
+            temp = (temp*x) % p;
+        y = y>>1; // y = y/2 
+        x = (x*x) % p;   
+    } 
+    return temp; 
+} 
