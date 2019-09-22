@@ -15,5 +15,5 @@ int main()
 
     return 0;
 }
-OUTPUT:4
+ OUTPUT:4
 24
