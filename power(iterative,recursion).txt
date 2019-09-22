@@ -3,7 +3,7 @@
  int power(int,int);
 void main()
 {
-    int x,n,res=1,i,k;
+    int x,n,temp=1,i,k;
     printf("enter number x");
     scanf("%d",&x);
     printf("enter power to be raised");
@@ -11,9 +11,9 @@ void main()
     //iterative
     for(i=1;i<=n;i++)
     {
-        res=res*x;
+        temp=temp*x;
     }
-    printf("%d",res);
+    printf("%d",temp);
     k=power(x,n);
     printf("%d ",k);
 }
@@ -27,3 +27,5 @@ int power(int x,int n)
     else 
     exit(0);
 }
+OUTPUT:2 2
+4(for both iterative and recursive)
