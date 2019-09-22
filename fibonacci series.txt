@@ -1,0 +1,20 @@
+/*Program to print fibonacci series with time complexity in 
+Best case:O(1)
+Worst case:O(n) 
+It yields the same using recursion and dynamic programming approach*/
+#include <stdio.h>
+
+int main()
+{
+    int a=0,b=1,c,i,n;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        printf("%d",a);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    
+    return 0;
+}
